@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     console.log("Register")
           this.fire.auth.createUserWithEmailAndPassword(this.email,this.password)
           .then(user =>{
-          console.log(this.email,this.password)
+         /* console.log(this.email,this.password)*/
           this.router.navigate(['/home'])
 
 

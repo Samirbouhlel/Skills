@@ -49,8 +49,8 @@ export class UserprofileComponent implements OnInit {
             let y = action.payload.toJSON()
             y["$key"] = action.key
             this.userkey=action.key
-        //   console.log(action.payload.toJSON())
-        //   console.log(action.payload.child('uid').val() )
+          console.log(action.payload.toJSON())
+          console.log(action.payload.child('uid').val() )
 
             if (action.payload.child('uid').val() == this.myid ) {
              this.userkey=action.key
@@ -75,7 +75,7 @@ export class UserprofileComponent implements OnInit {
 
   }
   
-  upload(event) {
+ /* upload(event) {
     const id = Math.random().toString(36).substring(2);
     this.ref = this.afStorage.ref(id);
     this.task = this.ref.put(event.target.files[0]);
@@ -105,7 +105,7 @@ export class UserprofileComponent implements OnInit {
 
     })
     
-  }
+  }*/
   ngOnInit() {
     console.log(this.email)
     console.log(this.myid)
